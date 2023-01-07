@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import {
@@ -10,12 +10,13 @@ import {
 import emailjs from "@emailjs/browser";
 
 export default function Index() {
-  const [submitted, setSubmitted] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState([]);
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const form = useRef();
 
@@ -72,6 +73,7 @@ export default function Index() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     if (validate()) {
       emailjs
         .sendForm(
@@ -82,14 +84,30 @@ export default function Index() {
         )
         .then(
           (result) => {
-            console.log(result.text);
+            setSubmitted(true);
+            setName("");
+            setEmail("");
+            setPhone("");
+            setMessage("");
           },
           (error) => {
-            console.log(error.text);
+            setErrors((error) => [
+              ...error,
+              { type: "submit", message: "Something went wrong" },
+            ]);
           }
         );
     }
+    setLoading(false);
   };
+
+  useEffect(() => {
+    if (submitted) {
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    }
+  }, [submitted]);
 
   return (
     <div className="pt-24 bg-background-about bg-cover min-h-screen font-source px-8 lg:px-32 xl:px-72">
@@ -114,6 +132,7 @@ export default function Index() {
                       setName(e.target.value);
                     }}
                     name="from_name"
+                    value={name}
                   />
                   {errors.map((error, index) => {
                     if (error.type === "name") {
@@ -138,6 +157,7 @@ export default function Index() {
                       setPhone(e.target.value);
                     }}
                     name="phone_number"
+                    value={phone}
                   />
                   {errors.map((error, index) => {
                     if (error.type === "phone") {
@@ -164,7 +184,7 @@ export default function Index() {
                       setEmail(e.target.value);
                     }}
                     name="from_email"
-                    required
+                    value={email}
                   />
                   {errors.map((error, index) => {
                     if (error.type === "email") {
@@ -191,29 +211,27 @@ export default function Index() {
                 }}
                 rows="4"
                 name="message"
+                value={message}
               />
-              {errors.map((error, index) => {
-                if (error.type === "message") {
-                  return (
-                    <p
-                      className="text-red-500 text-xs font-semibold"
-                      key={index}
-                    >
-                      {error.message}
-                    </p>
-                  );
-                }
-              })}
             </div>
             <input
               className="px-4 py-1 bg-[#2f2f2f] text-white font-semibold rounded mt-6 cursor-pointer"
               type="submit"
-              value="Send"
+              value={loading ? "Sending..." : "Send"}
             />
+            {errors.map((error, index) => {
+              if (error.type === "submit") {
+                return (
+                  <p className="text-red-500 text-xs font-semibold" key={index}>
+                    {error.message}
+                  </p>
+                );
+              }
+            })}
             {submitted ? (
               <div className="flex gap-2 items-center mt-4">
                 <FontAwesomeIcon icon={faCheckCircle} />
-                <p>Now just mail the form through your mailing app.</p>
+                <p>Your response has been sent to Himanshu Chittora.</p>
               </div>
             ) : null}
           </form>
