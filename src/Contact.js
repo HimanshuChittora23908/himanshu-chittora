@@ -8,7 +8,6 @@ import {
   faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser";
-import { useNavigate } from "react-router-dom";
 
 export default function Index() {
   const [name, setName] = useState("");
@@ -20,7 +19,6 @@ export default function Index() {
   const [loading, setLoading] = useState(false);
 
   const form = useRef();
-  const navigate = useNavigate();
 
   let errorLength = 0;
   console.log(errors, errorLength);

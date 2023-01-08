@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Nav = styled.nav`
   padding: 5vh 48px;
   min-height: 18vh;
   background: ${(props) => (props.open ? "#1c2022" : "transparent")};
-  z-index: 100;
   position: absolute;
+  z-index: 100;
 `;
 
 const Item = styled.li``;
@@ -56,6 +57,7 @@ const Overlay = styled.div`
   width: 100vw;
   background: #1c2022;
   transition: height 0.4s ease-in-out;
+  z-index: 99;
 `;
 
 const OverlayMenu = styled.ul`
@@ -79,6 +81,8 @@ const OverlayMenu = styled.ul`
 
 const Navbar = () => {
   const [toggle, toggleNav] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <>
       <Nav>

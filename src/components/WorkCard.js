@@ -7,11 +7,11 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 export default function WorkCard({ data, index }) {
   return (
     <div
-      className={`flex justify-between items-center ${
+      className={`flex justify-between w-full items-center ${
         index % 2 !== 0 ? "flex-row-reverse" : ""
       }`}
     >
-      <div>
+      <div className="w-3/5">
         <p className="font-source text-2xl font-bold text-[#3f3f3f] mb-2">
           {data?.type}
         </p>
@@ -44,15 +44,19 @@ export default function WorkCard({ data, index }) {
           </div>
         ) : null}
       </div>
-      <LazyLoadImage
-        src={data.img}
-        alt={data.title}
-        className={`${data.subtitle ? "w-1/2" : "w-2/3"} ${
-          index % 2 !== 0
-            ? `${data.subtitle ? "-ml-16" : "-ml-36"}`
-            : `${data.subtitle ? "-mr-16" : "-mr-36"}`
-        }`}
-      />
+      <div className={`w-1/2 ${index % 2 !== 0 ? "-ml-28" : "-mr-28"}`}>
+        {data.placeholder ? (
+          <LazyLoadImage
+            src={data.img}
+            alt={data.title}
+            effect="blur"
+            placeholderSrc={data.placeholder}
+            className="w-[600px] object-cover"
+          />
+        ) : (
+          <LazyLoadImage src={data.img} alt={data.title} />
+        )}
+      </div>
     </div>
   );
 }

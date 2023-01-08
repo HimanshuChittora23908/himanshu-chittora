@@ -1,15 +1,26 @@
 import React, { useState } from "react";
 import eDaftarMockup from "./images/eDaftarMockup.png";
+import eDaftarMockupPlaceholder from "./images/eDaftarMockupPlaceholder.png";
 import HostelVerseMockup from "./images/HostelVerseMockup.png";
+import HostelVerseMockupPlaceholder from "./images/HostelVerseMockupPlaceholder.png";
 import MelioLabsMockup from "./images/MelioLabsMockup.png";
+import MelioLabsMockupPlaceholder from "./images/MelioLabsMockupPlaceholder.png";
 import acadHEREMockup from "./images/acadHEREMockup.png";
+import acadHEREMockupPlaceholder from "./images/acadHEREMockupPlaceholder.png";
 import SFAPlayMockup from "./images/SFAPlayMockup.png";
+import SFAPlayMockupPlaceholder from "./images/SFAPlayMockupPlaceholder.png";
 import Design1 from "./images/Design1.png";
+import Design1Placeholder from "./images/Design1Placeholder.png";
 import Design2 from "./images/Design2.png";
+import Design2Placeholder from "./images/Design2Placeholder.png";
 import Design3 from "./images/Design3.png";
+import Design3Placeholder from "./images/Design3Placeholder.png";
 import Design4 from "./images/Design4.png";
+import Design4Placeholder from "./images/Design4Placeholder.png";
 import Design5 from "./images/Design5.png";
+import Design5Placeholder from "./images/Design5Placeholder.png";
 import Design6 from "./images/Design6.png";
+import Design6Placeholder from "./images/Design6Placeholder.png";
 
 import WorkCard from "./components/WorkCard";
 
@@ -27,6 +38,7 @@ export default function Work() {
       ],
       link: "https://www.melio.tech/",
       img: MelioLabsMockup,
+      placeholder: MelioLabsMockupPlaceholder,
     },
     {
       title: "eDaftar",
@@ -41,6 +53,7 @@ export default function Work() {
       ],
       link: "https://sih-2022.vercel.app/",
       img: eDaftarMockup,
+      placeholder: eDaftarMockupPlaceholder,
     },
     {
       title: "Hybrowlabs Technologies Pvt. Ltd.",
@@ -54,6 +67,7 @@ export default function Work() {
       ],
       link: "https://app.sfaplay.com/",
       img: SFAPlayMockup,
+      placeholder: SFAPlayMockupPlaceholder,
     },
     {
       title: "HostelVerse",
@@ -67,6 +81,7 @@ export default function Work() {
       ],
       link: "https://hostelverse.vercel.app/",
       img: HostelVerseMockup,
+      placeholder: HostelVerseMockupPlaceholder,
     },
     {
       title: "acadHERE",
@@ -79,6 +94,7 @@ export default function Work() {
       ],
       link: "https://acadhere.vercel.app/",
       img: acadHEREMockup,
+      placeholder: acadHEREMockupPlaceholder,
     },
   ];
 
@@ -89,6 +105,7 @@ export default function Work() {
       about:
         "A short film to fight against the global occurring issue of depression. The film is designed to spread awareness about the issue and to help people who are suffering from it.",
       img: Design1,
+      placeholder: Design1Placeholder,
     },
     {
       type: "Sci-Fi",
@@ -96,12 +113,14 @@ export default function Work() {
       about:
         "A sci-fi concept design for a plasma ball to showcase the power of light and its ability to create a plasma ball.",
       img: Design2,
+      placeholder: Design2Placeholder,
     },
     {
       type: "Toy",
       title: "Teddy Bear",
       about: "A fluffy teddy bear to keep you company in your lonely times.",
       img: Design3,
+      placeholder: Design3Placeholder,
     },
     {
       type: "Abstract",
@@ -109,12 +128,14 @@ export default function Work() {
       about:
         "An abstract art design to understand symmetry and balance. It also makes us understand power of simplicity and sound.",
       img: Design4,
+      placeholder: Design4Placeholder,
     },
     {
       type: "Food",
       title: "Donut",
       about: "A donut to satisfy your sweet tooth.",
       img: Design5,
+      placeholder: Design5Placeholder,
     },
     {
       type: "Abstract",
@@ -122,6 +143,7 @@ export default function Work() {
       about:
         "A satisfying abstract art design to calm your mind. Take you closer to nature. Take a deep breath and relax. Have a break.",
       img: Design6,
+      placeholder: Design6Placeholder,
     },
   ];
 
