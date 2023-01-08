@@ -37,13 +37,13 @@ export default function WorkCard({ data, index }) {
           </p>
         ) : null}
         {data.link ? (
-          <div
+          <a
             className="flex gap-4 mt-4 items-center font-source text-lg lg:text-xl font-bold text-[#7DB0A5] hover:cursor-pointer"
-            onClick={() => window.open(data.link)}
+            href={data.link}
           >
             <p className="">Learn More</p>
             <FontAwesomeIcon icon={solid("angle-right")} />
-          </div>
+          </a>
         ) : null}
       </div>
       <div
