@@ -40,6 +40,7 @@ export default function WorkCard({ data, index }) {
           <a
             className="flex gap-4 mt-4 items-center font-source text-lg lg:text-xl font-bold text-[#7DB0A5] hover:cursor-pointer"
             href={data.link}
+            target="_blank"
           >
             <p className="">Learn More</p>
             <FontAwesomeIcon icon={solid("angle-right")} />

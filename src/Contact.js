@@ -262,37 +262,39 @@ export default function Index() {
               </p>
             </span>
             <span className="flex justify-between text-lg items-center mt-14">
-              <FontAwesomeIcon
-                icon={brands("github")}
-                className="cursor-pointer"
-                onClick={() => {
-                  window.location.href =
-                    "https://github.com/HimanshuChittora23908";
-                }}
-              />
-              <FontAwesomeIcon
-                icon={brands("instagram")}
-                className="cursor-pointer"
-                onClick={() => {
-                  window.location.href =
-                    "https://www.instagram.com/himanshu_23908/";
-                }}
-              />
-              <FontAwesomeIcon
-                icon={brands("linkedin")}
-                className="cursor-pointer"
-                onClick={() => {
-                  window.location.href =
-                    "https://www.linkedin.com/in/himanshu-chittora-57b695200/";
-                }}
-              />
-              <FontAwesomeIcon
-                icon={brands("twitter")}
-                className="cursor-pointer"
-                onClick={() => {
-                  window.location.href = "https://twitter.com/Himanshu23908";
-                }}
-              />
+              <a
+                href="https://github.com/HimanshuChittora23908"
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={brands("github")}
+                  className="cursor-pointer"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/himanshu_23908/"
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={brands("instagram")}
+                  className="cursor-pointer"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/himanshu-chittora-57b695200/"
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={brands("linkedin")}
+                  className="cursor-pointer"
+                />
+              </a>
+              <a href="https://twitter.com/Himanshu23908" target="_blank">
+                <FontAwesomeIcon
+                  icon={brands("twitter")}
+                  className="cursor-pointer"
+                />
+              </a>
             </span>
           </div>
         </div>
