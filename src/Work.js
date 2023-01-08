@@ -148,12 +148,12 @@ export default function Work() {
   ];
 
   return (
-    <div className="bg-[#191819] min-h-screen">
-      <p className="font-bebas text-7xl text-white text-center pt-24 tracking-widest">
+    <div className="bg-[#191819] min-h-screen px-8 lg:px-0">
+      <p className="font-bebas text-5xl md:text-7xl text-white text-center pt-24 tracking-widest">
         Work
       </p>
-      <div className="flex justify-center pt-16">
-        <div className="flex justify-between items-center w-1/2">
+      <div className="flex justify-center pt-8 md:pt-16">
+        <div className="flex justify-around lg:justify-between items-center w-full lg:w-1/2">
           {["Programming", "Designing"].map((item, index) => {
             return (
               <div
@@ -162,7 +162,7 @@ export default function Work() {
                   selected === index
                     ? "text-[#7DB0A5] border-[#7DB0A5]"
                     : "text-white border-white"
-                } font-bebas text-2xl border-b-4 pb-2 px-4 cursor-pointer tracking-wider`}
+                } font-bebas text-lg lg:text-2xl border-b-4 pb-2 px-4 cursor-pointer tracking-wider`}
                 onClick={() => setSelected(index)}
               >
                 {item}
@@ -173,13 +173,13 @@ export default function Work() {
       </div>
       <div className="w-full flex justify-center text-white -mt-16">
         {selected === 0 ? (
-          <div className="w-3/4 my-32 flex flex-col gap-y-64">
+          <div className="w-full lg:w-3/4 my-24 lg:my-32 flex flex-col gap-y-32 lg:gap-y-64">
             {programming.map((item, index) => {
               return <WorkCard data={item} index={index} />;
             })}
           </div>
         ) : (
-          <div className="w-3/4 my-32 flex flex-col gap-y-64">
+          <div className="w-full lg:w-3/4 my-32 flex flex-col gap-y-32 lg:gap-y-64">
             {designing.map((item, index) => {
               return <WorkCard data={item} index={index} />;
             })}

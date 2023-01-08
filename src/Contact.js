@@ -110,13 +110,13 @@ export default function Index() {
   }, [submitted]);
 
   return (
-    <div className="flex items-center bg-background-about bg-cover min-h-screen font-source px-8 lg:px-32 xl:px-72">
+    <div className="flex items-center bg-[#191819] md:bg-background-about bg-cover min-h-screen font-source py-16 lg:py-0 px-8 lg:px-32 xl:px-72">
       <div>
-        <p className="text-4xl text-center md:text-left md:text-6xl tracking-wider font-bebas text-white">
+        <p className="text-4xl text-center xl:text-left md:text-6xl tracking-wider font-bebas text-white">
           GET IN TOUCH
         </p>
-        <div className="bg-gray-100 rounded-3xl mt-8 shadow-2xl flex flex-col md:flex-row overflow-hidden">
-          <div className="py-8 px-12 md:w-2/3">
+        <div className="bg-gray-100 rounded-3xl mt-4 lg:mt-8 shadow-2xl flex flex-col md:flex-row overflow-hidden">
+          <div className="px-8 py-6 lg:py-8 lg:px-12 md:w-3/5">
             <p className="text-[#2f2f2f] text-xl font-medium">
               Drop me a message
             </p>
@@ -124,7 +124,7 @@ export default function Index() {
               <div className="flex flex-col md:flex-row gap-8 mt-8">
                 <span className="flex flex-col gap-8 md:w-1/2">
                   <div>
-                    <label className="text-small text-black">Your Name</label>
+                    <label className="text-sm text-black">Your Name</label>
                     <br />
                     <input
                       type="text"
@@ -149,9 +149,7 @@ export default function Index() {
                     })}
                   </div>
                   <div>
-                    <label className="text-small text-black">
-                      Phone Number
-                    </label>
+                    <label className="text-sm text-black">Phone Number</label>
                     <br />
                     <input
                       type="text"
@@ -178,9 +176,7 @@ export default function Index() {
                 </span>
                 <span className="flex flex-col gap-8 md:w-1/2">
                   <div>
-                    <label className="text-small text-black">
-                      Email Address
-                    </label>
+                    <label className="text-sm text-black">Email Address</label>
                     <br />
                     <input
                       type="text"
@@ -207,7 +203,7 @@ export default function Index() {
                 </span>
               </div>
               <div className="mt-8">
-                <label className="text-small text-black">Message</label>
+                <label className="text-sm text-black">Message</label>
                 <br />
                 <textarea
                   className="text-sm border-1 border-form-line w-full mt-2 bg-gray-100 rounded"
@@ -244,8 +240,8 @@ export default function Index() {
               ) : null}
             </form>
           </div>
-          <div className="bg-[#2f2f2f] md:w-1/3 p-12 text-white">
-            <p className="text-lg font-medium">Contact Information</p>
+          <div className="bg-[#2f2f2f] md:w-2/5 p-8 lg:p-12 text-white">
+            <p className="text-xl font-semibold">Contact Information</p>
             <span className="flex gap-5 items-center mt-14">
               <FontAwesomeIcon icon={faMapMarkerAlt} />
               <p>Cosmos Greens, Bhiwadi, Rajasthan, India (301019)</p>
