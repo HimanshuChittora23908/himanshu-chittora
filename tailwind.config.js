@@ -5,7 +5,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         "background-image": "url('/src/images/Homepage.png')",
+        "background-image-mobile": "url('/src/images/HomepageMobile.png')",
         "background-about": "url('/src/images/About.png')",
+        "background-about-mobile": "url('/src/images/AboutMobile.png')",
       },
       fontFamily: {
         bebas: ["Bebas Neue", "cursive"],

@@ -152,7 +152,7 @@ export default function Work() {
       <p className="font-bebas text-7xl text-white text-center pt-24 tracking-widest">
         Work
       </p>
-      <div className="flex justify-center pt-12">
+      <div className="flex justify-center pt-16">
         <div className="flex justify-between items-center w-1/2">
           {["Programming", "Designing"].map((item, index) => {
             return (
@@ -171,7 +171,7 @@ export default function Work() {
           })}
         </div>
       </div>
-      <div className="w-full flex justify-center text-white">
+      <div className="w-full flex justify-center text-white -mt-16">
         {selected === 0 ? (
           <div className="w-3/4 my-32 flex flex-col gap-y-64">
             {programming.map((item, index) => {

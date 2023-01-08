@@ -6,9 +6,9 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function About() {
   return (
-    <div className="bg-background-about bg-cover text-white h-screen">
-      <div className="flex h-screen justify-center items-center">
-        <div className="w-1/4 rounded-2xl overflow-hidden shadow-lg -mt-8">
+    <div className="bg-[#191819] xl:bg-background-about bg-cover text-white min-h-screen">
+      <div className="flex flex-col xl:flex-row min-h-screen justify-center items-center py-24 px-8 xl:py-0 xl:px-0">
+        <div className="xl:px-0 md:w-1/2 xl:w-1/4 rounded-t-2xl overflow-hidden shadow-xl xl:-mt-24">
           <LazyLoadImage
             src={PersonalImage}
             alt="Personal Image"
@@ -17,11 +17,11 @@ export default function About() {
             className=""
           />
         </div>
-        <div className="w-2/5 bg-[#1f1f1f] -ml-16 mt-24 text-white p-8 rounded-2xl shadow-lg font-source text-justify z-10">
-          <p className="font-east text-9xl -mt-24 text-right text-green-500">
+        <div className="md:w-5/6 xl:w-3/5 bg-[#1f1f1f] -mt-4 xl:-ml-16 xl:mt-24 text-white p-4 xl:p-8 rounded-b-2xl shadow-xl font-source text-justify z-10">
+          <p className="font-east text-8xl xl:text-9xl -mt-4 xl:-mt-24 text-center xl:text-right text-green-500">
             About
           </p>
-          <div className="text-sm">
+          <div className="text-sm xl:text-base">
             <p className="mt-4">
               Himanshu Chittora would describe himself as "An Explorer" if he
               had to describe himself in a few words. In terms of learning new
@@ -80,7 +80,7 @@ export default function About() {
               "Adobe Creative Suite",
             ].map((skill) => {
               return (
-                <div className="px-4 py-1 rounded bg-[#2f2f2f]">
+                <div className="px-2 xl:px-4 py-1 rounded bg-[#2f2f2f]">
                   <p className="text-white">{skill}</p>
                 </div>
               );

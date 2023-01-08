@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   const arr = [
-    { title: "Programming", description: "MERN, BLOCKCHAIN, C++" },
+    { title: "Programming", description: "MERN, Web3.0, Ethereum, C++" },
     {
       title: "Designing",
       description: "BLENDER, ADOBE CREATIVE SUITE, UI/UX",
@@ -20,11 +20,11 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-background-image bg-cover text-white min-h-screen h-screen">
-      <div className="flex h-screen justify-between items-center pl-32">
+    <div className="bg-background-image-mobile md:bg-background-image bg-cover text-white min-h-screen">
+      <div className="flex h-screen justify-between items-center pl-8 pr-8 md:pl-16 lg:pl-32 md:pr-0">
         <div className="flex-col items-center">
-          <img src={WhoIs} alt="" className="w-96" />
-          <div className="flex mt-16">
+          <img src={WhoIs} alt="WhoIs" className="w-72 md:w-96" />
+          <div className="flex md:flex-row flex-col gap-4 mt-8 md:mt-16">
             {arr.map((item, index) => {
               return (
                 <HomeCard title={item.title} description={item.description} />
@@ -32,7 +32,7 @@ export default function Home() {
             })}
           </div>
           <Link
-            className="mt-24 flex gap-2 text-4xl text-[#7DB0A5] hover:cursor-pointer"
+            className="mt-12 md:mt-24 flex gap-2 text-3xl md:text-4xl text-[#7DB0A5] hover:cursor-pointer"
             to="/work"
           >
             <FontAwesomeIcon icon={solid("eye")} />

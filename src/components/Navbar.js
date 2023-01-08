@@ -8,6 +8,10 @@ const Nav = styled.nav`
   background: ${(props) => (props.open ? "#1c2022" : "transparent")};
   position: absolute;
   z-index: 100;
+
+  @media (max-width: 640px) {
+    padding: 4vh 24px;
+  }
 `;
 
 const Item = styled.li``;
@@ -49,6 +53,10 @@ const Logo = styled.h1`
   transform: translate(-50%, -75%);
   transition: opacity 0.4s ease-in-out;
   opacity: ${(props) => (props.open ? 0 : 1)};
+
+  @media (max-width: 640px) {
+    font-size: 128px;
+  }
 `;
 
 const Overlay = styled.div`
@@ -76,6 +84,17 @@ const OverlayMenu = styled.ul`
 
   li:nth-child(2) {
     margin: 48px 0px;
+  }
+
+  @media (max-width: 640px) {
+    li {
+      font-size: 32px;
+      margin: 24px 0px;
+    }
+
+    li:nth-child(2) {
+      margin: 24px 0px;
+    }
   }
 `;
 
