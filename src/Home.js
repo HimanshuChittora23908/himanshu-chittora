@@ -2,13 +2,8 @@ import React from "react";
 import WhoIs from "./images/WhoIs.svg";
 import HomeCard from "./components/HomeCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-  icon,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
-import { Link } from "react-router-dom";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import Resume from "./resume/Resume.pdf";
 
 export default function Home() {
   const arr = [
@@ -31,15 +26,19 @@ export default function Home() {
               );
             })}
           </div>
-          <Link
-            className="mt-12 md:mt-24 flex gap-2 text-3xl md:text-4xl text-[#7DB0A5] hover:cursor-pointer"
-            to="/work"
-          >
-            <FontAwesomeIcon icon={solid("eye")} />
-            <p className="uppercase font-bebas font-bold tracking-wide">
-              Work.
-            </p>
-          </Link>
+          <div className="flex gap-16 mt-12 md:mt-24">
+            <a
+              className="flex gap-2 text-3xl md:text-4xl text-[#7DB0A5] hover:cursor-pointer"
+              href={Resume}
+              target="_blank"
+              download="Resume.pdf"
+            >
+              <FontAwesomeIcon icon={solid("eye")} />
+              <p className="uppercase font-bebas font-bold tracking-wide">
+                Resume.
+              </p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
