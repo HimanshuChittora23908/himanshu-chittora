@@ -8,6 +8,7 @@ import {
   faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 export default function Index() {
   const [name, setName] = useState("");
@@ -19,6 +20,7 @@ export default function Index() {
   const [loading, setLoading] = useState(false);
 
   const form = useRef();
+  const navigate = useNavigate();
 
   let errorLength = 0;
   console.log(errors, errorLength);
@@ -257,26 +259,37 @@ export default function Index() {
               2020kucp1023@iiitkota.ac.in
             </p>
           </span>
-          <span className="flex gap-6 items-center mt-14">
+          <span className="flex justify-between text-lg items-center mt-14">
             <FontAwesomeIcon
-              icon={brands("google")}
+              icon={brands("github")}
               className="cursor-pointer"
-            />
-            <FontAwesomeIcon
-              icon={brands("facebook")}
-              className="cursor-pointer"
+              onClick={() => {
+                window.location.href =
+                  "https://github.com/HimanshuChittora23908";
+              }}
             />
             <FontAwesomeIcon
               icon={brands("instagram")}
               className="cursor-pointer"
+              onClick={() => {
+                window.location.href =
+                  "https://www.instagram.com/himanshu_23908/";
+              }}
             />
             <FontAwesomeIcon
-              icon={brands("youtube")}
+              icon={brands("linkedin")}
               className="cursor-pointer"
+              onClick={() => {
+                window.location.href =
+                  "https://www.linkedin.com/in/himanshu-chittora-57b695200/";
+              }}
             />
             <FontAwesomeIcon
               icon={brands("twitter")}
               className="cursor-pointer"
+              onClick={() => {
+                window.location.href = "https://twitter.com/Himanshu23908";
+              }}
             />
           </span>
         </div>
