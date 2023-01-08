@@ -106,6 +106,7 @@ export default function Work() {
         "A short film to fight against the global occurring issue of depression. The film is designed to spread awareness about the issue and to help people who are suffering from it.",
       img: Design1,
       placeholder: Design1Placeholder,
+      link: "https://drive.google.com/file/d/1oY33BXZ_8lArD7Y5P2QylJ_9LB8V4ir_/view?usp=sharing",
     },
     {
       type: "Sci-Fi",
@@ -114,6 +115,7 @@ export default function Work() {
         "A sci-fi concept design for a plasma ball to showcase the power of light and its ability to create a plasma ball.",
       img: Design2,
       placeholder: Design2Placeholder,
+      link: "https://drive.google.com/file/d/1faixokCjx3rfenxaohOMuilTjCz3MiQt/view?usp=sharing",
     },
     {
       type: "Toy",
@@ -121,6 +123,7 @@ export default function Work() {
       about: "A fluffy teddy bear to keep you company in your lonely times.",
       img: Design3,
       placeholder: Design3Placeholder,
+      link: "https://drive.google.com/file/d/1VCAHs4dH5DyatsCCd8l6H86cw-WZqUfZ/view?usp=sharing",
     },
     {
       type: "Abstract",
@@ -129,6 +132,7 @@ export default function Work() {
         "An abstract art design to understand symmetry and balance. It also makes us understand power of simplicity and sound.",
       img: Design4,
       placeholder: Design4Placeholder,
+      link: "https://drive.google.com/file/d/1wXkpCZVtqc3Gt-ohirMse_lcwxrT5nQ7/view?usp=sharing",
     },
     {
       type: "Food",
@@ -136,6 +140,7 @@ export default function Work() {
       about: "A donut to satisfy your sweet tooth.",
       img: Design5,
       placeholder: Design5Placeholder,
+      link: "https://drive.google.com/file/d/1itq1m5ifzPWzSNCTls4E0uyQiwwpHBVY/view?usp=sharing",
     },
     {
       type: "Abstract",
@@ -144,6 +149,7 @@ export default function Work() {
         "A satisfying abstract art design to calm your mind. Take you closer to nature. Take a deep breath and relax. Have a break.",
       img: Design6,
       placeholder: Design6Placeholder,
+      link: "https://drive.google.com/file/d/1banUY1EjEbOGOqFvJ6hcrmMC0syunALs/view?usp=sharing",
     },
   ];
 
