@@ -7,9 +7,9 @@ import Resume from "./resume/Resume.pdf";
 
 export default function Home() {
   const arr = [
-    { title: "Programming", description: "MERN, Web3.0, Ethereum, C++" },
+    { title: "Developer", description: "MERN, Web3.0, Ethereum, C++" },
     {
-      title: "Designing",
+      title: "Designer",
       description: "BLENDER, ADOBE CREATIVE SUITE, UI/UX",
     },
   ];
