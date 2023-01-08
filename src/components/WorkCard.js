@@ -45,17 +45,13 @@ export default function WorkCard({ data, index }) {
         ) : null}
       </div>
       <div className={`w-1/2 ${index % 2 !== 0 ? "-ml-28" : "-mr-28"}`}>
-        {data.placeholder ? (
-          <LazyLoadImage
-            src={data.img}
-            alt={data.title}
-            effect="blur"
-            placeholderSrc={data.placeholder}
-            className="w-[600px] object-cover"
-          />
-        ) : (
-          <LazyLoadImage src={data.img} alt={data.title} />
-        )}
+        <LazyLoadImage
+          src={data.img}
+          alt={data.title}
+          effect="blur"
+          placeholderSrc={data.placeholder}
+          className="w-[600px] object-cover"
+        />
       </div>
     </div>
   );
